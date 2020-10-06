@@ -17,12 +17,6 @@ class network:
 
     def compute_cost(self, output, Y):
         # C = 1/(2n) * sum for every example( ||y - A[L]|| ^2 )
-#        self.cost = 1./(2.*self.m)*np.sum(np.linalg.norm(Y-output,axis=0)**2)
-        # print("Y slice is:")
-        # print(Y[:,456:460])
-        # print("output slice is:")
-        # print(output[:,456:460])
-        
         self.cost = 0.5*np.sum(np.linalg.norm(Y-output,axis=0)**2)        
         return self.cost
                 
@@ -34,9 +28,6 @@ class network:
     def backprop_all(self, output, Y):
         # self.error is dJ/dA[L] if cost function J() changes so does this derivative
         dA = self.error = (output-Y)
-        # print("dA slice is:")
-        # print(dA[:,456:460])
-        
         for i in range(1,len(self.layers)+1):
             dA = self.layers[-i].backprop(dA, self.A[-(i+1)], self.m)
 

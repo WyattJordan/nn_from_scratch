@@ -12,7 +12,6 @@ class relu():
         return np.clip(z,0.,None)
 
     def dfn(self, z):
-        # derivative is 0 if z<0 and 1 if z>0
         return np.where(z<0,0.,1.)
 
 class tanh():
@@ -20,6 +19,5 @@ class tanh():
         return np.tanh(z)
 
     def dfn(self, z):
-        # derivative is 0 if z<0 and 1 if z>0
         return 1. - self.fn(z)**2.
     
