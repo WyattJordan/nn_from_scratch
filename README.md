@@ -1,7 +1,7 @@
 # Simple MNIST classifier using numpy on CPU
 
 ## Fancy Graphic
-![Image of Cost Function](img/L1_900-->L2_300-->L3_10_e:500_a:0.04_acc:86.3%.png)
+![Image of Cost Function](/img/L1_900-->L2_300-->L3_10_e:500_a:0.04_acc:86.3%.png)
 
 ## Implements
 - Basic Forward Propagation for user-defined network  
